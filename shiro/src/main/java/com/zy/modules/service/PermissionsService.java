@@ -2,7 +2,6 @@ package com.zy.modules.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.zy.modules.pojo.entity.PermissionsEntity;
-
 /**
  * <p>
  *  服务类
