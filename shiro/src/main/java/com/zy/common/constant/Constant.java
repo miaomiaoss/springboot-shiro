@@ -1,4 +1,4 @@
-package com.zy.common;
+package com.zy.common.constant;
 
 import com.baomidou.mybatisplus.core.toolkit.IdWorker;
 
