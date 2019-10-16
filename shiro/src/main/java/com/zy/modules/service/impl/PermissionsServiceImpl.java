@@ -1,7 +1,7 @@
 package com.zy.modules.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.zy.modules.mapper.PermissionsMapper;
+import com.zy.modules.dao.PermissionsMapper;
 import com.zy.modules.pojo.entity.PermissionsEntity;
 import com.zy.modules.service.PermissionsService;
 import org.springframework.stereotype.Service;

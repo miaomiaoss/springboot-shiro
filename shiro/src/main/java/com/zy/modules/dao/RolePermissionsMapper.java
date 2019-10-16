@@ -1,4 +1,4 @@
-package com.zy.modules.mapper;
+package com.zy.modules.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.zy.modules.pojo.entity.RolePermissionsEntity;

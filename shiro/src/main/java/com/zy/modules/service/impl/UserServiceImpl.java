@@ -2,7 +2,7 @@ package com.zy.modules.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.zy.modules.pojo.entity.UserEntity;
-import com.zy.modules.mapper.UserMapper;
+import com.zy.modules.dao.UserMapper;
 import com.zy.modules.service.UserService;
 import org.springframework.stereotype.Service;
 
