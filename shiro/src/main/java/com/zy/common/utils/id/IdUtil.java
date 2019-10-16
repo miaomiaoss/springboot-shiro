@@ -9,7 +9,7 @@ public class IdUtil {
 
     /**
      * @description twitter项目snowflake
-     * @author 王栋
+     * @author zy
      * @date 2019/4/24 19:09
      * @param
      * @return long
