@@ -4,10 +4,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.zy.modules.pojo.entity.UserEntity;
 
 /**
- * <p>
- *  服务类
- * </p>
- *
+ * 用户
  * @author zy
  * @since 2019-10-16
  */

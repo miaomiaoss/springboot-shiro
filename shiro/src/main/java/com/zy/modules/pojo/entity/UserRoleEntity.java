@@ -7,10 +7,7 @@ import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
 /**
- * <p>
- * 
- * </p>
- *
+ * 用户角色关联
  * @author zy
  * @since 2019-10-16
  */

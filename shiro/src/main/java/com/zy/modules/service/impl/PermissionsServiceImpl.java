@@ -6,10 +6,7 @@ import com.zy.modules.pojo.entity.PermissionsEntity;
 import com.zy.modules.service.PermissionsService;
 import org.springframework.stereotype.Service;
 /**
- * <p>
- *  服务实现类
- * </p>
- *
+ * 权限
  * @author zy
  * @since 2019-10-16
  */

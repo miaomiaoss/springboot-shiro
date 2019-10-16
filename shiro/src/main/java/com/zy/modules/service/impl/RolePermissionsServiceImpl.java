@@ -7,10 +7,7 @@ import com.zy.modules.service.RolePermissionsService;
 import org.springframework.stereotype.Service;
 
 /**
- * <p>
- *  服务实现类
- * </p>
- *
+ * 角色权限关联
  * @author zy
  * @since 2019-10-16
  */

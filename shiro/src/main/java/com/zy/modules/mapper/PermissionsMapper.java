@@ -4,10 +4,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.zy.modules.pojo.entity.PermissionsEntity;
 
 /**
- * <p>
- *  Mapper 接口
- * </p>
- *
+ * 权限
  * @author zy
  * @since 2019-10-16
  */

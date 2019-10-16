@@ -5,10 +5,7 @@ import com.zy.modules.pojo.entity.UserRoleEntity;
 
 
 /**
- * <p>
- *  服务类
- * </p>
- *
+ * 用户角色关联
  * @author zy
  * @since 2019-10-16
  */
