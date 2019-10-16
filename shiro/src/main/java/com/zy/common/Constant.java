@@ -11,7 +11,7 @@ public class Constant {
 
     public static void main(String[] args) {
         long id = IdWorker.getId();
-        System.out.println(id
-        );
+
+        System.out.println(id);
     }
 }
