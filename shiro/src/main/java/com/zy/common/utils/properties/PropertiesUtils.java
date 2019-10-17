@@ -36,7 +36,6 @@ public class PropertiesUtils {
             return null;
         }
 
-        assert properties != null;
         return properties.getProperty(key);
     }
 }
