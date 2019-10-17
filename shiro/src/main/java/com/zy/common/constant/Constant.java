@@ -1,7 +1,5 @@
 package com.zy.common.constant;
 
-import com.baomidou.mybatisplus.core.toolkit.IdWorker;
-
 /**
  * @Description :
  * @Author : zhangyan
@@ -9,9 +7,23 @@ import com.baomidou.mybatisplus.core.toolkit.IdWorker;
  */
 public class Constant {
 
-    public static void main(String[] args) {
-        long id = IdWorker.getId();
+    /**
+     * 正常状态编码
+     */
+    public static final Integer SUCCESS_CODE = 200;
 
-        System.out.println(id);
-    }
+    /**
+     * 正常状态编码
+     */
+    public static final Integer FAIL_CODE = 500;
+
+    /**
+     * 正常状态信息
+     */
+    public static final String SUCCESS_MSG = "操作成功！";
+
+    /**
+     * 正常状态信息
+     */
+    public static final String FAIL_MSG = "系统异常，请联系管理员！";
 }

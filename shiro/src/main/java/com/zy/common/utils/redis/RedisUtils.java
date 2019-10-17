@@ -9,7 +9,7 @@ import redis.clients.jedis.params.SetParams;
 import java.util.Set;
 
 /**
- * @ProjectName liuyun-shiro
+ * @ProjectName springboot-shiro
  * @ClassName RedisUtils
  * @Description
  * @Author zy

@@ -1,11 +1,11 @@
 package com.zy.common.utils.properties;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.config.PropertiesFactoryBean;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 
 /**
@@ -27,11 +27,10 @@ public class PropertiesUtils {
     **/
     public static String getProperties(String key){
         Resource resource = new ClassPathResource(RESOURCE_NAME);
-        Properties properties;
+        Properties properties = new Properties();
         try {
-            PropertiesFactoryBean propertiesFactoryBean = new PropertiesFactoryBean();
-            propertiesFactoryBean.setLocation(resource);
-            properties = propertiesFactoryBean.getObject();
+            InputStream inputStream = resource.getInputStream();
+            properties.load(inputStream);
         } catch (IOException e) {
             e.printStackTrace();
             return null;
