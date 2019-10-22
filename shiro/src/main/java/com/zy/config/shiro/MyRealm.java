@@ -22,6 +22,11 @@ public class MyRealm extends AuthorizingRealm {
     **/
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
+
+
+
+
+
         return null;
     }
 
@@ -34,6 +39,10 @@ public class MyRealm extends AuthorizingRealm {
     **/
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
+
+
+
+        
         return null;
     }
 }
