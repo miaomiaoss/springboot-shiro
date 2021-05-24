@@ -2,4 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zy.modules.dao.UserMapper">
 
+    <select id="getRole" parameterType="string" resultType="com.zy.modules.pojo.dto.UserDTO">
+        select * from t_user t1
+        join t_user_role t2 on t1.id = t2.user_id
+        join t_role t3 on t2.role_id = t3.id
+        where t1.user_name = #{userName}
+    </select>
+    
 </mapper>

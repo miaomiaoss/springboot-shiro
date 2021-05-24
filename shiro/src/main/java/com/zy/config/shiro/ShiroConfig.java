@@ -25,6 +25,7 @@ public class ShiroConfig {
 
         HashMap<String, String> filterChainDefinitionMap = new HashMap<>(16);
         filterChainDefinitionMap.put("/user/register","anon");
+        filterChainDefinitionMap.put("/user/test/**","anon");
         filterChainDefinitionMap.put("/user/logout","logout");
         //主要这行代码必须放在所有权限设置的最后，不然会导致所有 url 都被拦截 剩余的都需要认证
         filterChainDefinitionMap.put("/**","authc");
@@ -41,8 +42,15 @@ public class ShiroConfig {
         DefaultSubjectDAO defaultSubjectDAO = new DefaultSubjectDAO();
 
         defaultWebSecurityManager.setSubjectDAO(defaultSubjectDAO);
-        defaultWebSecurityManager.setRealm(myRealm);
+//        defaultWebSecurityManager.setRealm(getMyRealm());
+        defaultWebSecurityManager.setRealm(myRealm);//该方法需要MyRealm加@Component注解
 
         return defaultWebSecurityManager;
     }
+
+
+    /*@Bean
+    public MyRealm getMyRealm() {
+        return new MyRealm();
+    }*/
 }

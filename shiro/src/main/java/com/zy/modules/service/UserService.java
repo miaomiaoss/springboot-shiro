@@ -1,6 +1,7 @@
 package com.zy.modules.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.zy.modules.pojo.dto.UserDTO;
 import com.zy.modules.pojo.entity.UserEntity;
 
 /**
@@ -10,4 +11,5 @@ import com.zy.modules.pojo.entity.UserEntity;
  */
 public interface UserService extends IService<UserEntity> {
 
+    UserDTO getRole(String userName);
 }
