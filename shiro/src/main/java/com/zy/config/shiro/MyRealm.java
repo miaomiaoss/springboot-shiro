@@ -1,6 +1,7 @@
 package com.zy.config.shiro;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.zy.modules.pojo.dto.UserDTO;
 import com.zy.modules.pojo.entity.UserEntity;
 import com.zy.modules.service.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -10,10 +11,14 @@ import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.SimpleAuthenticationInfo;
 import org.apache.shiro.authz.AuthorizationInfo;
+import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @Description :
@@ -38,15 +43,18 @@ public class MyRealm extends AuthorizingRealm {
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         log.info("--------授权流程--------");
         String principal = (String) SecurityUtils.getSubject().getPrincipal();
-        SimpleAuthenticationInfo info = new SimpleAuthenticationInfo();
-        QueryWrapper<UserEntity> wrapper = new QueryWrapper<>();
-        wrapper.eq("user_name", principal);
-        UserEntity user = userService.getOne(wrapper);
+        SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
+
+        UserDTO roleDTO = userService.getRole(principal);
         //获得该用户角色
+        String role= roleDTO.getRoleCode();
+        Set<String> roleSet = new HashSet<>();
+        //需要将role封装到set作为info.setRoles()的参数
+        roleSet.add(role);
+        //设置该用户拥有的角色
+        info.setRoles(roleSet);
 
-
-
-        return null;
+        return info;
     }
 
     /**

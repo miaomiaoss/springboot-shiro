@@ -27,6 +27,7 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/user/register","anon");
         filterChainDefinitionMap.put("/user/test/**","anon");
         filterChainDefinitionMap.put("/user/logout","logout");
+        filterChainDefinitionMap.put("/user/admin/**","roles[admin]");
         //主要这行代码必须放在所有权限设置的最后，不然会导致所有 url 都被拦截 剩余的都需要认证
         filterChainDefinitionMap.put("/**","authc");
         //--------------------------
@@ -44,6 +45,7 @@ public class ShiroConfig {
         defaultWebSecurityManager.setSubjectDAO(defaultSubjectDAO);
 //        defaultWebSecurityManager.setRealm(getMyRealm());
         defaultWebSecurityManager.setRealm(myRealm);//该方法需要MyRealm加@Component注解
+        
 
         return defaultWebSecurityManager;
     }
